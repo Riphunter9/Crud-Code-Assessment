@@ -1,0 +1,118 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    
+}
+.navbar-brand{
+    letter-spacing:1em;
+    
+}
+.navbar {
+    background-color: #336699;
+}
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+  
+}
+.nav-item a {
+    font-size: 16px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+   
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/*added css */
+.myForm{
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    left: 30%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); 
+}
+@media screen and (max-width: 450px) {
+    .form-wrapper, .col, input[type=submit] {
+        margin-top: 30% !important;
+        overflow: hidden;
+        display:block;
+    }
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+#Heading-Container {
+    background-image: linear-gradient(#336699, #1a53ff);
+    letter-spacing: 0.7em;
+}
+#BackBtn {
+    width: 49% !important;
+}
+#BackBtn:hover{
+    color:white;
+}
+#DeleteBtn{
+    width:48% !important;
+}
