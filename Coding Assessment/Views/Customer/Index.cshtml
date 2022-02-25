@@ -9,7 +9,7 @@
         <table id="myTable" class="table table-bordered table-striped table-hover ">
             <thead class="thead-dark">
                 <tr>
-                    <th> Full Name</th>
+                    <th>Full Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>
                     <th>Address</th>
@@ -32,8 +32,8 @@
                             <td>@customer.VatNumber</td>
                             <td>
                                 <a asp-action="Edit" asp-controller="Customer" class="btn btn-outline-info w-50" asp-route-id="@customer.CustomerID">Edit</a>
-                                <form asp-action="Delete" method="post" asp-route-id="@customer.CustomerID" id="MyForm" class="d-inline">
-                                    <button type="button" class="btn btn-danger " onclick="Confirmation(this)" id="DeleteBtn">Delete</button>
+                                <form asp-action="Delete" method="post" asp-route-id="@customer.CustomerID" id="_@customer.CustomerID" class="d-inline">
+                                    <button type="button" class="btn btn-danger " onclick="Confirmation(this,@customer.CustomerID)" id="DeleteBtn">Delete</button>
                                 </form>
                             </td>
                         </tr>
@@ -46,7 +46,7 @@
 </div>
 <!--SweetAlert2 confirmation js-->
 <script type="text/javascript">
-    function Confirmation(event) {
+    function Confirmation(event, customerID) {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -62,9 +62,8 @@
                     'Deleted!',
                     'Customer Deleted',
                     'success'
-
                 ).then(result => {
-                    document.querySelector('#MyForm').submit();
+                    document.querySelector(`#_${customerID}`).submit();
                 })
             }
         })

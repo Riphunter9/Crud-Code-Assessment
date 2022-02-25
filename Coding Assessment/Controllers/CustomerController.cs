@@ -15,7 +15,7 @@ namespace Coding_Assessment.Controllers
     {
         private readonly ILogger<CustomerController> _logger;
         private readonly CustomerDbContext _customerDbContext;
-        private readonly INotyfService _notyf;//injecting toastr notification object to constructor
+        private readonly INotyfService _notyf;
 
         public CustomerController(ILogger<CustomerController> logger,CustomerDbContext db,INotyfService notyf)
         {
@@ -54,13 +54,14 @@ namespace Coding_Assessment.Controllers
                 {
                     _customerDbContext.customers.Add(customer);
                     _notyf.Success("Customer Added");
-
                 }
-                else
+                else if(customer.CustomerID==customer.CustomerID && customer.CustomerID>0)
+                {
                     _customerDbContext.customers.Update(customer);
-                    _customerDbContext.SaveChanges();
+                     
                     _notyf.Success("Customer Updated");
-                
+                }
+               _customerDbContext.SaveChanges();
                 return RedirectToAction("Index");
             }
             else
@@ -71,6 +72,11 @@ namespace Coding_Assessment.Controllers
         }
         //editing ends
         //delete begin
+        //[HttpGet]
+        //public async Task<IActionResult> Delete(int id)
+        //{
+
+        //}
      
         [HttpPost]
         public async Task<IActionResult> Delete(int id)

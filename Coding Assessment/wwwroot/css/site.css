@@ -12,7 +12,7 @@ a.navbar-brand {
     
 }
 .navbar {
-    background-color: #336699;
+    background-color: #30658F;
 }
 /* Provide sufficient contrast against white background */
 a {
@@ -55,7 +55,7 @@ html {
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
@@ -86,11 +86,13 @@ body {
 .myForm{
     position: absolute;
     top: 50%;
-    right: 30%;
-    left: 30%;
+    right: 35%;
+    left: 35%;
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
+    
 }
+
 @media screen and (max-width: 450px) {
     .form-wrapper, .col, input[type=submit] {
         margin-top: 30% !important;
@@ -104,7 +106,7 @@ body {
     padding-right: 0;
 }
 #Heading-Container {
-    background-image: linear-gradient(#336699, #1a53ff);
+    background-image: linear-gradient(180deg,#30658F, #02C4B9);
     letter-spacing: 0.7em;
 }
 #BackBtn {
@@ -115,4 +117,8 @@ body {
 }
 #DeleteBtn{
     width:48% !important;
+}
+
+.notyf__toast{
+    border-radius:10px !important;
 }

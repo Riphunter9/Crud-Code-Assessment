@@ -23,5 +23,7 @@ namespace Coding_Assessment.Models
    
         [DisplayName("Vat Number")]
         public string VatNumber { get; set; }
+
+        
     }
 }
