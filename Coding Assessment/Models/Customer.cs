@@ -7,12 +7,12 @@ namespace Coding_Assessment.Models
     {
         [Key]
         public int CustomerID { get; set; }
-        [Required(ErrorMessage ="Please enter your full name")]
+        [Required(ErrorMessage ="Please enter your name")]
         [DisplayName("Name")]
         public string CustomerName { get; set; }
         [DisplayName("Phone Number")]
         public string PhoneNumber { get; set; }
-        [Required(ErrorMessage ="Please Enter your Address")]
+        [Required(ErrorMessage ="Please enter your address")]
         public string Address { get; set; }
         [DisplayName("Contact Person Name")]
         public string ContactPersonName { get; set; }
